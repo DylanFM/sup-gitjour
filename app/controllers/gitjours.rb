@@ -1,11 +1,11 @@
 class Gitjours < Application
-  provides :js
+  provides :json
 
   def list
     jour = Gitjour.new
     jour.request
     @response = jour.response
-    render
+    display @response
   end
   
 end
