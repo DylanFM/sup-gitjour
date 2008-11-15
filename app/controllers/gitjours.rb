@@ -2,7 +2,9 @@ class Gitjours < Application
   provides :xml, :js
 
   def list
-    @list = Gitjour.list
+    jour = Gitjour.new
+    jour.request
+    @response = jour.response
     render
   end
   
