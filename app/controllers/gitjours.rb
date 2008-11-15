@@ -1,5 +1,5 @@
 class Gitjours < Application
-  provides :xml, :js
+  provides :js
 
   def list
     jour = Gitjour.new

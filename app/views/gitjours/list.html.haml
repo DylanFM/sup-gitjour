@@ -1,10 +1,10 @@
 %ul.apps
-  - @response.keys.each do |app_title|
+  - @response.each do |app|
     %li
       %strong
-        =h app_title
+        =h app[0]
       %ul.repos
-        - for (app_repo, url) in @response[app_title]
+        - for (app_repo, url) in app[1]
           %li.repo
             =h app_repo
             %a{:href => url, :title => "git clone #{url}", :class => 'url'}
