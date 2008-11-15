@@ -1,0 +1,15 @@
+[
+<% @response.each do |app| -%>
+  {
+    'name':'<%=app[0]%>',
+    'repos':[
+    <% for (app_repo, url) in app[1] -%>
+      {
+        'name':'<%=app_repo%>',
+        'url':'<%=url%>'
+      },
+    <% end -%>
+    ]
+  },  
+<% end -%>
+]
