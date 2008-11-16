@@ -17,7 +17,8 @@ function update_message (old_count, new_count)
   var msg = '';
   if (diff != 0) 
   {
-    msg = (diff < 0) ? 'Less repositories' : 'More repositories';
+    msg = (diff > 0 ? '+':'')+diff+' repositor';
+    msg += (diff == 1 || diff == -1) ? 'y' : 'ies' ;
   }
   else
   {
@@ -45,7 +46,7 @@ function update_jours ()
     $("#apps").html(apps);
     var new_count = get_apps_count();
     setup_jours();
-    $.choones("Updated", update_message(old_count, new_count));
+    $.choones(update_message(old_count, new_count));
     console.log("Old count: "+old_count+", new count: "+new_count);
     setTimeout(update_jours, 6000);
   });
