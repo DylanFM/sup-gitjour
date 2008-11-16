@@ -1,4 +1,3 @@
 Todo:
 
 - Rake task for running gitjour list as cron. Each request shouldn't do it.
-- Opt-in to ajax refresh
