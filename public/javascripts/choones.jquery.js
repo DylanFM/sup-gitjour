@@ -15,9 +15,9 @@
 	  },
 	  
 		display: function () {
-			$('#choones').fadeOut('slow');
+			$('#choones').fadeIn();
 			this.timeout = setTimeout(function () {
-				$('#choones').fadeIn('slow');
+				$('#choones').fadeOut();
 			}, $.choones.settings.display_time);
 		}
 	});
@@ -44,7 +44,7 @@
 	
 	// Set either a success or failure state
 	setType = function () {
-		$('#choones')[0].className = ($.choones.settings.type == 'success') ? 'success' : 'failure';
+		$('#choones')[0].className = $.choones.settings.type;
 	}
 	
 	setMessage = function () {

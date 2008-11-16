@@ -10,8 +10,12 @@ body {text-align:center;background-color:#F1FFDF}
 	div.header, div.content {width:940px}
 	.header {padding-top:1.5em}
 	
+fieldset#settings {position:absolute;top:1.5em; right: 1.5em; width:150px; -moz-border-radius: 6px;-webkit-border-radius: 6px;border-radius: 6px; background-color:#eee; text-align:center; padding: .75em; }
+  fieldset#settings li {padding:0}
+  fieldset#settings label {margin:0;width:7em}
+	
 /*Choones*/
-div#choones { position: absolute; top: 1.5em; right: 1.5em;
+div#choones { position: absolute; top: 6em; right: 1.5em;
   filter:alpha(opacity=85); -moz-opacity: 0.85; opacity: 0.85; 
   background-repeat: no-repeat; background-position: .75em .75em;
   -moz-border-radius: 6px;-webkit-border-radius: 6px;border-radius: 6px;

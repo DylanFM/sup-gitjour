@@ -14,24 +14,20 @@ function get_apps_count ()
 function update_message (old_count, new_count)
 {
   var diff = new_count - old_count;
-  var msg = '';
   if (diff != 0) 
   {
     msg = (diff > 0 ? '+':'')+diff+' repositor';
-    msg += (diff == 1 || diff == -1) ? 'y' : 'ies' ;
+    msg += (diff == 1 || diff == -1) ? 'y' : 'ies';
+    $.choones(msg);
   }
-  else
-  {
-    msg = 'No change';
-  }
-  return msg;
 }
 
 function update_jours ()
 {
+  setTimeout(update_jours, 12000);
+  if (!$('#auto-refresh').attr('checked')) return;
 	$.getJSON('/gitjours/list.json',{},
   function(json){
-    clearTimeout();
     var apps = '';
     for (var i=0; i < json.length; i++) 
     {
@@ -46,9 +42,8 @@ function update_jours ()
     $("#apps").html(apps);
     var new_count = get_apps_count();
     setup_jours();
-    $.choones(update_message(old_count, new_count));
+    update_message(old_count, new_count);
     console.log("Old count: "+old_count+", new count: "+new_count);
-    setTimeout(update_jours, 6000);
   });
 }
 
