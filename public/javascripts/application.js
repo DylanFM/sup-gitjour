@@ -2,7 +2,8 @@ function setup_jours ()
 {
   $("input.url").focus(function() 
   {
-    this.select();
+    $.copy('gitjour clone '+$(this).attr('value'));
+    $.choones('Copied', '', {type: 'notice'});
   });
 }
 
@@ -18,7 +19,7 @@ function update_message (old_count, new_count)
   {
     msg = (diff > 0 ? '+':'')+diff+' repositor';
     msg += (diff == 1 || diff == -1) ? 'y' : 'ies';
-    $.choones(msg);
+    $.choones(msg,'',{type: 'success'});
   }
 }
 
