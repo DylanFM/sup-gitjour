@@ -15,9 +15,9 @@
 	  },
 	  
 		display: function () {
-			$('#choones').slideDown();
+			$('#choones').fadeOut('slow');
 			this.timeout = setTimeout(function () {
-				$('#choones').slideUp();
+				$('#choones').fadeIn('slow');
 			}, $.choones.settings.display_time);
 		}
 	});
