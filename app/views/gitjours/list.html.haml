@@ -7,6 +7,5 @@
         - for (app_repo, url) in app[1]
           %li.repo
             =h app_repo
-            %a{:href => url, :title => "git clone #{url}", :class => 'url'}
-              =h url
+            %input{:type => 'text', :value => url, :class => 'url', :id => app_repo, :size => 50, :readonly => 'readonly'}
           
