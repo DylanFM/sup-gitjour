@@ -6,6 +6,7 @@
     %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }
     %link{ :href => "/stylesheets/master.css", :rel => "stylesheet", :media => "screen", :type => "text/css", :charset => "utf-8" }
     %script{ :src => '/javascripts/jquery.js', :type => 'application/javascript' }
+    %script{ :src => '/javascripts/choones.jquery.js', :type => 'application/javascript' }
     %script{ :src => '/javascripts/application.js', :type => 'application/javascript' }
   %body
     .container
@@ -15,3 +16,9 @@
       .content.column
         = catch_content :for_layout
       .clear
+      #choones.success
+        %h3
+          Title
+        %p
+          Message
+

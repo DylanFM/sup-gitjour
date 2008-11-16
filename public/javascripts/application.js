@@ -6,6 +6,26 @@ function setup_jours ()
   });
 }
 
+function get_apps_count ()
+{
+  return $("#apps > li").length;
+}
+
+function update_message (old_count, new_count)
+{
+  var diff = new_count - old_count;
+  var msg = '';
+  if (diff != 0) 
+  {
+    msg = (diff < 0) ? 'Less repositories' : 'More repositories';
+  }
+  else
+  {
+    msg = 'No change';
+  }
+  return msg;
+}
+
 function update_jours ()
 {
 	$.getJSON('/gitjours/list.json',{},
@@ -21,8 +41,12 @@ function update_jours ()
       });
       apps += '</ul></li>';
     }
+    var old_count = get_apps_count();
     $("#apps").html(apps);
+    var new_count = get_apps_count();
     setup_jours();
+    $.choones("Updated", update_message(old_count, new_count));
+    console.log("Old count: "+old_count+", new count: "+new_count);
     setTimeout(update_jours, 6000);
   });
 }
