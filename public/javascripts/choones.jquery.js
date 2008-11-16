@@ -52,19 +52,4 @@
 		$('#choones').children('p').text(display.message || '');
 	}
 
-	// 
-	// == Events
-	//
-	
-	// If there is a message to display already in the DOM, display it
-
-	if($('#choones').children('p').text() != 'Message') {
-		$.choones.display();
-	}
-	
-	// When the user scrolls we need to re-tack the message area to the bottom of the screen
-	$(document).scroll(function () {
-		var clip = ($(this).scrollTop() > 0) ? '-' + $(this).scrollTop() : 0;
-		$('#choones').css({bottom: clip + 'px'});
-	});
 })(jQuery);
