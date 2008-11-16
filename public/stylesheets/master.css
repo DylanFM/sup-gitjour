@@ -5,7 +5,7 @@ body {text-align:center;background-color:#F1FFDF}
 	
 	#apps, #apps ul {list-style:none;margin:0}
 		#apps>li {margin-bottom:1.5em}
-			.repo .url {border:0;padding:0;font-family:Inconsolata,Anonymous,"Bitsream Vera Sans Mono",Consolas,"Courier New",Courier}
+			.repo .url {border:0;padding:0;font-family:monospace}
 	
 	div.header, div.content {width:940px}
 	.header {padding-top:1.5em}
@@ -19,7 +19,7 @@ div#choones { position: absolute; top: 6em; right: 1.5em;
   filter:alpha(opacity=85); -moz-opacity: 0.85; opacity: 0.85; 
   background-repeat: no-repeat; background-position: .75em .75em;
   -moz-border-radius: 6px;-webkit-border-radius: 6px;border-radius: 6px;
-  padding: .75em; display: none; width:150px; text-align:center; }
+  padding: .75em; display: none; width:150px; height:1.5em; text-align:center; }
 .success { background-color:#00AF2B}
 .failure { background-color:#860000}
 div#choones h3 { width: 100%; }
