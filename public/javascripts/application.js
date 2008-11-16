@@ -43,7 +43,7 @@ function update_jours ()
     var new_count = get_apps_count();
     setup_jours();
     update_message(old_count, new_count);
-    console.log("Old count: "+old_count+", new count: "+new_count);
+    // console.log("Old count: "+old_count+", new count: "+new_count);
   });
 }
 
