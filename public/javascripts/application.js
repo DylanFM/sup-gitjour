@@ -25,7 +25,7 @@ function update_message (old_count, new_count)
 
 function update_jours ()
 {
-  setTimeout(update_jours, 12000);
+  setTimeout(update_jours, 25000);
   if (!$('#auto-refresh').attr('checked')) return;
 	$.getJSON('/gitjours/list.json',{},
   function(json){
