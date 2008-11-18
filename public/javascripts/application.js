@@ -1,9 +1,9 @@
 function setup_jours ()
 {
-  $("input.url").focus(function() 
+  $("#apps input").focus(function() 
   {
     $.copy('gitjour clone '+$(this).attr('value'));
-    $.choones('Copied', '', {type: 'notice'});
+    $.choones('Copied',{type: 'notice'});
   });
 }
 
@@ -19,7 +19,7 @@ function update_message (old_count, new_count)
   {
     msg = (diff > 0 ? '+':'')+diff+' repositor';
     msg += (diff == 1 || diff == -1) ? 'y' : 'ies';
-    $.choones(msg,'',{type: 'success'});
+    $.choones(msg,{type: 'success'});
   }
 }
 
@@ -33,9 +33,9 @@ function update_jours ()
     for (var i=0; i < json.length; i++) 
     {
       var app = json[i];
-      apps += '<li><strong>'+app.name+'</strong><ul class="repos">';
+      apps += '<li><h4>'+app.name+'</h4><ul>';
       $(app.repos).each(function(j){
-        apps += '<li class="repo">'+app.repos[j].name+' <input type="text" value="'+app.repos[j].url+'" class="url" size="50" readonly="readonly" /></li>';
+        apps += '<li><strong>'+app.repos[j].name+'</strong> <input type="text" value="'+app.repos[j].url+'" size="50" readonly="readonly" /></li>';
       });
       apps += '</ul></li>';
     }

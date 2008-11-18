@@ -1,0 +1,66 @@
+Gathering for up to 5 seconds...
+===  (15 copies)
+	pickle git://ianwhite.local:9148/
+	response_for git://ianwhite.local:9148/
+	rspec-dev git://ianwhite.local:9148/
+	rspec git://ianwhite.local:9148/
+	inherit_views git://ianwhite.local:9148/
+	rspec-rails git://ianwhite.local:9148/
+	resources_controller git://ianwhite.local:9148/
+	nested_has_many_through git://ianwhite.local:9148/
+	matewatch git://ianwhite.local:9148/
+	truncate_html git://ianwhite.local:9148/
+	git_friendly_dumper git://ianwhite.local:9148/
+	response_for_rc git://ianwhite.local:9148/
+	rails git://ianwhite.local:9148/
+	garlic git://ianwhite.local:9148/
+	clag git://ianwhite.local:9148/
+=== active-matchers 
+	pat-active-matchers git://freelancing-god.local/active-matchers
+=== captcha_with_question 
+	pat-captcha_with_question git://freelancing-god.local/captcha_with_question
+=== clickatell 
+	pat-clickatell git://freelancing-god.local/clickatell
+=== collective 
+	pat-collective git://freelancing-god.local/collective
+=== cows-not-kittens 
+	pat-cows-not-kittens git://freelancing-god.local/cows-not-kittens
+=== cucumber 
+	pat-cucumber git://freelancing-god.local/cucumber
+=== dejour 
+	pat-dejour git://freelancing-god.local/dejour
+=== delayed_job 
+	pat-delayed_job git://freelancing-god.local/delayed_job
+=== duke 
+	pat-duke git://freelancing-god.local/duke
+=== freebase 
+	pat-freebase git://freelancing-god.local/freebase
+=== garlic 
+	pat-garlic git://freelancing-god.local/garlic
+=== gemjour 
+	pat-gemjour git://freelancing-god.local/gemjour
+=== ginger 
+	pat-ginger git://freelancing-god.local/ginger
+=== gitjour 
+	nathan-gitjour git://macbookpoo.local/gitjour
+=== gitman 
+	pat-gitman git://freelancing-god.local/gitman
+=== haml 
+	pat-haml git://freelancing-god.local/haml
+=== machinist 
+	pat-machinist git://freelancing-god.local/machinist
+=== mephisto 
+	nathan-mephisto git://macbookpoo.local/mephisto
+=== mute 
+	pat-mute git://freelancing-god.local/mute
+=== muxtape-rb 
+	pat-muxtape-rb git://freelancing-god.local/muxtape-rb
+=== not_a_mock 
+	pat-not_a_mock git://freelancing-god.local/not_a_mock
+=== pain-point 
+	pat-pain-point git://freelancing-god.local/pain-point
+=== pat-cows-not-kittens 
+	nathan-pat-cows-not-kittens git://macbookpoo.local/pat-cows-not-kittens
+=== pat-garlic 
+	nathan-pat-garlic git://macbookpoo.local/pat-garlic
+50 repositories shown.

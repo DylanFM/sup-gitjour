@@ -1,8 +1,7 @@
 (function ($) {
-	$.choones = function (title, message) {
-		var args = arguments[2] || {};
-		
-		init(title, message, args);
+	$.choones = function (title) {
+		var args = arguments[1] || {};
+		init(title, args);
 	}
 	
 	//
@@ -15,9 +14,12 @@
 	  },
 	  
 		display: function () {
-			$('#choones').fadeIn();
+		  var el = $("#choones div:last");
+			el.fadeIn();
 			this.timeout = setTimeout(function () {
-				$('#choones').fadeOut();
+				el.fadeOut(function(){
+				  $(this).remove();
+				});
 			}, $.choones.settings.display_time);
 		}
 	});
@@ -25,14 +27,12 @@
 	//
 	// == Private methods
 	//
-	
-	init = function (title, message, args) {
-		display = {title: title, message: message};
+	init = function (title, args) {
+		display = {title: title};
 		$.choones.settings = $.extend($.choones.settings, args);
 		
 		resetTimeout();
-		setType();
-		setMessage();
+		buildMessage();
 		$.choones.display();
 	}
 	
@@ -42,14 +42,8 @@
 		}
 	}
 	
-	// Set either a success or failure state
-	setType = function () {
-		$('#choones')[0].className = $.choones.settings.type;
-	}
-	
-	setMessage = function () {
-		$('#choones').children('h3').text(display.title);
-		$('#choones').children('p').text(display.message || '');
+	buildMessage = function () {
+    $("#choones").append('<div class="'+$.choones.settings.type+'"><h3>'+display.title+'</h3></div>');
 	}
 
 })(jQuery);
