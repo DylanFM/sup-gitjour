@@ -1,0 +1,13 @@
+'Sup Gitjour?
+
+This is a one-page Merb app which displays the results of running the command "gitjour list". There's the option to have the page updated automatically every 25 seconds.
+
+A few ideas:
+- Have a local cloned copy of any repositories so they are available when they are no longer served.
+- Add notes to repos... tags? ratings? 
+- Search.. maybe like an autocompletion kind-of filter on the repositories shown
+- Pull info from repos, like latest commit (how long ago?) etc.
+
+
+This was developed at Railscamp 4 2008 in Adelaide, Australia with the crew from RORO.
+http://railscamp08.net | http://rubyonrails.com.au
