@@ -8,19 +8,11 @@ require 'erb'
 require 'haml'
 
 get '/' do
-  @jours = get_jours
+  @jours = Supgitjour.list
   haml :index
 end
 
 get '/list' do
-  @jours = get_jours
+  @jours = Supgitjour.list
   erb :list, :layout => false
-end
-
-helpers do
-  def get_jours
-    jour = Supgitjour.new
-    jour.request
-    jour.response
-  end
 end
