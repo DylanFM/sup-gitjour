@@ -1,14 +1,13 @@
 %p.intro
   Click an address to copy the repository's gitjour clone command, i.e. <em>gitjour clone git://macbookpoo.local/pat-cows-not-kittens</em>.
 %ul#apps
-  - @response.each do |app|
+  - @jours.each do |app|
     %li
       %h4
-        =h app[0]
+        = app[0]
       %ul
         - for (app_repo, url) in app[1]
           %li
             %strong
-              =h app_repo
+              = app_repo
             %input{:type => 'text', :value => url, :id => app_repo, :size => 50, :readonly => 'readonly'}
-          
