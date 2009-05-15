@@ -1,6 +1,7 @@
 class Supgitjour
   class << self
     def list
+      Gitjour::Application.class_eval { @list = nil if @list }
       response = Gitjour::Application.send(:service_list).to_a
       response.inject({}) do |repos,service|
         service_key = service.repository.empty? ? service.name.to_sym : service.repository.to_sym
