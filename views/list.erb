@@ -1,12 +1,12 @@
 [
-<% @jours.each do |app| %>
+<% @jours.each do |(name, services)| %>
   {
-    'name':'<%=app[0]%>',
+    'name':'<%=name.to_s%>',
     'repos':[
-    <% for (app_repo, url) in app[1] %>
+    <% services.each do |service| %>
       {
-        'name':'<%=app_repo%>',
-        'url':'<%=url%>'
+        'name':'<%=service.name%>',
+        'url':"git://<%= service.host.gsub(/\.$/,"") %><%= service.port == 9418 ? "" : ":#{service.port}" %>/<%= service.path %>"
       },
     <% end %>
     ]

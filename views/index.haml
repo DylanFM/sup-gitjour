@@ -1,13 +1,13 @@
 %p.intro
   Click an address to copy the repository's gitjour clone command, i.e. <em>gitjour clone git://macbookpoo.local/pat-cows-not-kittens</em>. If you don't have gitjour installed run: <span class="command">sudo gem install gitjour</span>
 %ul#apps
-  - @jours.each do |app|
+  - @jours.each do |(name, services)|
     %li
       %h4
-        = app[0]
+        = name.to_s
       %ul
-        - for (app_repo, url) in app[1]
+        - services.each do |repo|
           %li
             %strong
-              = app_repo
-            %input{:type => 'text', :value => url, :id => app_repo, :size => 50, :readonly => 'readonly'}
+              = repo.name
+            %input{:type => 'text', :value => "git://#{repo.host.gsub(/\.$/,"")}#{repo.port == 9418 ? "" : ":#{repo.port}"}/#{repo.path}", :id => repo.name, :size => 50, :readonly => 'readonly'}

@@ -6,6 +6,7 @@ require 'supgitjour'
 require 'sinatra'
 require 'erb'
 require 'haml'
+require 'pp'
 
 get '/' do
   @jours = Supgitjour.list
